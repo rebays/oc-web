@@ -1,4 +1,3 @@
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 function Hero() {
@@ -36,10 +35,9 @@ function Hero() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-xl bg-[#106c9d] px-8 py-4 font-bold text-white shadow-lg shadow-[#106c9d]/30 transition-all hover:bg-[#3b9fd4] hover:-translate-y-0.5 active:scale-95"
+            className="inline-flex items-center rounded-full bg-[#106c9d] px-8 py-4 font-bold text-white shadow-lg shadow-[#106c9d]/30 transition-all hover:bg-[#3b9fd4] hover:-translate-y-0.5 active:scale-95"
           >
             Book a Consultation
-            <ChevronRight size={18} />
           </a>
         </div>
 
