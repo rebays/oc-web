@@ -18,9 +18,9 @@ export default function Home() {
       <WhyUs />
       <WhoWeAre />
       <FeaturedProjects />
-      <CTA />
       <Publications />
       <LatestArticles />
+      <CTA />
       <Footer />
     </main>
   );
