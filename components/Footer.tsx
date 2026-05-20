@@ -1,4 +1,4 @@
-import { Shield, Link2, Globe, MessageCircle } from "lucide-react";
+import { Link2, Globe, MessageCircle } from "lucide-react";
 
 function Footer() {
   return (
@@ -10,12 +10,7 @@ function Footer() {
 
           {/* Logo */}
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#106c9d] text-white">
-                <Shield size={20} />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">OrgClinic</span>
-            </div>
+            <span className="text-xl font-bold tracking-tight text-white">OrgClinic</span>
             <p className="max-w-xs text-sm leading-relaxed">
               Partnering with Solomon Islands leaders to build resilient, high-impact organizations.
             </p>
@@ -23,7 +18,6 @@ function Footer() {
 
           {/* Links */}
           <div className="flex flex-col gap-4">
-            <h5 className="text-sm font-bold uppercase tracking-widest text-white">Links</h5>
             <div className="flex flex-col gap-3 text-sm">
               <a href="#about" className="transition-colors hover:text-white">About</a>
               <a href="/people" className="transition-colors hover:text-white">Leadership</a>
@@ -34,7 +28,6 @@ function Footer() {
 
           {/* Socials */}
           <div className="flex flex-col gap-4">
-            <h5 className="text-sm font-bold uppercase tracking-widest text-white">Socials</h5>
             <div className="flex gap-3">
               {[
                 { icon: <Link2 size={16} />, label: "LinkedIn" },
