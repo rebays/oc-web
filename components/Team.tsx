@@ -45,14 +45,10 @@ function Team() {
       <div className="mx-auto max-w-7xl">
 
         {/* Header */}
-        <div className="mb-16">
-
-          <h2 className="text-4xl font-extrabold tracking-tight text-[#002b47] md:text-5xl">
-            Meet Our <span className="text-[#106c9d]">Strategic Advisors.</span>
+        <div className="mb-16 text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#002b47]">
+            Our Board of Directors
           </h2>
-          <p className="mt-4 max-w-xl text-base text-zinc-500">
-            Our team bridges international best practices with deep cultural fluency to provide unparalleled guidance in the Solomon Islands.
-          </p>
         </div>
 
         {/* Grid */}
