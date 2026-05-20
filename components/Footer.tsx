@@ -1,123 +1,144 @@
-import { Shield, ChevronRight, MapPin, Phone, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Shield, MapPin, Phone, Link2, Globe, MessageCircle } from "lucide-react";
+
+const socialLinks = [
+  { icon: <Link2 size={16} />, label: "LinkedIn" },
+  { icon: <Globe size={16} />, label: "Web" },
+  { icon: <MessageCircle size={16} />, label: "Social" },
+];
+
+const footerLinks = [
+  {
+    title: "The Firm",
+    links: [
+      ["About OrgClinic", "#about"],
+      ["Leadership", "#team"],
+      ["Our Methodology", "#"],
+      ["Impact Report", "#"],
+    ],
+  },
+  {
+    title: "Expertise",
+    links: [
+      ["Institutional Health", "#services"],
+      ["Strategic Advisory", "#services"],
+      ["Capacity Building", "#services"],
+      ["Governance", "#services"],
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      ["Case Studies", "#"],
+      ["Policy Briefs", "#"],
+      ["Diagnostic Tools", "#"],
+      ["Blog", "#"],
+    ],
+  },
+];
 
 function Footer() {
   return (
-    <footer className="bg-[#020617] pt-24 pb-12 text-zinc-400">
+    <footer className="bg-[#002b47] pb-12 pt-24 text-[#a8c8de]">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
-        
-        {/* Top Section: Branding & Newsletter */}
-        <div className="grid gap-16 border-b border-zinc-800/50 pb-20 lg:grid-cols-2 lg:gap-24">
-          <div className="flex flex-col justify-between">
-            <div>
-              <div className="flex items-center gap-3 mb-8">
-                <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#106c9d] to-[#004771] flex items-center justify-center text-white shadow-lg">
-                  <Shield size={22} />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xl font-bold tracking-tight text-white leading-none">OrgClinic</span>
-                  <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[#106c9d]">Pacific Advisory</span>
-                </div>
+
+        {/* Top */}
+        <div className="grid gap-16 border-b border-white/10 pb-20 lg:grid-cols-2 lg:gap-24">
+
+          {/* Brand */}
+          <div>
+            <div className="mb-6 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#106c9d] text-white shadow-lg">
+                <Shield size={20} />
               </div>
-              <p className="max-w-md text-lg leading-relaxed text-zinc-400">
-                Partnering with Solomon Islands leaders to build resilient, transparent, and high-impact organizations through international best practices.
-              </p>
+              <div>
+                <span className="block text-xl font-bold tracking-tight text-white leading-none">OrgClinic</span>
+                <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[#3b9fd4]">Pacific Advisory</span>
+              </div>
             </div>
-            
-            <div className="mt-10 flex gap-4">
-              {[Linkedin, Facebook, Twitter].map((Icon, i) => (
-                <a key={i} href="#" className="flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-400 transition-all hover:border-[#106c9d] hover:text-[#106c9d]">
-                  <Icon size={18} />
+            <p className="mb-8 max-w-sm leading-relaxed text-[#a8c8de]">
+              Partnering with Solomon Islands leaders to build resilient, transparent, and high-impact organizations through international best practices.
+            </p>
+            <div className="flex gap-3">
+              {socialLinks.map(({ icon, label }, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  aria-label={label}
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-[#a8c8de] transition-all hover:border-[#106c9d] hover:bg-[#106c9d] hover:text-white"
+                >
+                  {icon}
                 </a>
               ))}
             </div>
           </div>
-          
-          <div className="rounded-2xl bg-zinc-900/50 p-8 border border-zinc-800/50">
-            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#106c9d] mb-4">Advisory Insights</h4>
-            <p className="text-white font-semibold text-xl mb-6 leading-snug">Get the latest Pacific institutional insights delivered to your desk.</p>
+
+          {/* Newsletter */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#3b9fd4]">Advisory Insights</p>
+            <p className="mb-6 text-lg font-semibold leading-snug text-white">
+              Get the latest Pacific institutional insights delivered to your inbox.
+            </p>
             <form className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Business Email" 
-                className="w-full rounded-lg bg-zinc-800 border border-zinc-700 p-4 text-sm text-white outline-none focus:border-[#106c9d] transition-all"
+              <input
+                type="email"
+                placeholder="Business Email"
+                className="flex-1 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-[#a8c8de]/50 outline-none transition-all focus:border-[#106c9d]"
               />
-              <button className="rounded-lg bg-[#004771] px-6 py-4 font-bold text-white transition-all hover:bg-[#106c9d] active:scale-95 whitespace-nowrap">
+              <button
+                type="submit"
+                className="whitespace-nowrap rounded-xl bg-[#106c9d] px-5 py-3 font-bold text-white transition-all hover:bg-[#3b9fd4] active:scale-95"
+              >
                 Subscribe
               </button>
             </form>
-            <p className="mt-4 text-[11px] text-zinc-500 italic">By subscribing, you agree to our professional data policy.</p>
+            <p className="mt-3 text-[11px] text-[#a8c8de]/40">
+              By subscribing, you agree to our professional data policy.
+            </p>
           </div>
         </div>
 
-        {/* Middle Section: Links Grid */}
+        {/* Link columns */}
         <div className="grid grid-cols-2 gap-12 py-20 md:grid-cols-4">
-          <div className="flex flex-col gap-5">
-            <h5 className="text-sm font-bold tracking-widest text-white uppercase">The Firm</h5>
-            <div className="flex flex-col gap-3 text-sm">
-              <a href="#about" className="hover:text-[#106c9d] transition-colors">About OrgClinic</a>
-              <a href="#team" className="hover:text-[#106c9d] transition-colors">Leadership</a>
-              <a href="#" className="hover:text-[#106c9d] transition-colors">Our Methodology</a>
-              <a href="#" className="hover:text-[#106c9d] transition-colors">Impact Report</a>
+          {footerLinks.map((col, i) => (
+            <div key={i} className="flex flex-col gap-5">
+              <h5 className="text-sm font-bold uppercase tracking-widest text-white">{col.title}</h5>
+              <div className="flex flex-col gap-3 text-sm">
+                {col.links.map(([label, href], j) => (
+                  <a key={j} href={href} className="transition-colors hover:text-white">
+                    {label}
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-          
-          <div className="flex flex-col gap-5">
-            <h5 className="text-sm font-bold tracking-widest text-white uppercase">Expertise</h5>
-            <div className="flex flex-col gap-3 text-sm">
-              <a href="#services" className="hover:text-[#106c9d] transition-colors">Institutional Health</a>
-              <a href="#services" className="hover:text-[#106c9d] transition-colors">Strategic Advisory</a>
-              <a href="#services" className="hover:text-[#106c9d] transition-colors">Capacity Building</a>
-              <a href="#services" className="hover:text-[#106c9d] transition-colors">Governance</a>
-            </div>
-          </div>
+          ))}
 
+          {/* Address */}
           <div className="flex flex-col gap-5">
-            <h5 className="text-sm font-bold tracking-widest text-white uppercase">Resources</h5>
-            <div className="flex flex-col gap-3 text-sm">
-              <a href="#" className="hover:text-[#106c9d] transition-colors">Case Studies</a>
-              <a href="#" className="hover:text-[#106c9d] transition-colors">Policy Briefs</a>
-              <a href="#" className="hover:text-[#106c9d] transition-colors">Diagnostic Tools</a>
-              <a href="#" className="hover:text-[#106c9d] transition-colors">Blog</a>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-5">
-            <h5 className="text-sm font-bold tracking-widest text-white uppercase">Honiara HQ</h5>
+            <h5 className="text-sm font-bold uppercase tracking-widest text-white">Honiara HQ</h5>
             <div className="flex flex-col gap-4 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-[#106c9d] shrink-0" />
+                <MapPin size={16} className="mt-0.5 shrink-0 text-[#3b9fd4]" />
                 <span>Level 2, Mendana Avenue,<br />Honiara, Solomon Islands</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone size={18} className="text-[#106c9d] shrink-0" />
-                <span>+677 23456</span>
+                <Phone size={16} className="shrink-0 text-[#3b9fd4]" />
+                <span>+677 23000</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section: Legal & Credits */}
-        <div className="flex flex-col items-center justify-between gap-8 border-t border-zinc-800/50 pt-12 md:flex-row">
-          <div className="flex flex-wrap justify-center gap-8 text-[11px] font-medium tracking-widest uppercase">
-            <span className="text-zinc-500">© 2026 OrgClinic Advisory</span>
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Compliance</a>
-            <a href="#" className="hover:text-white transition-colors">Cookies</a>
+        {/* Bottom bar */}
+        <div className="flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-10 md:flex-row">
+          <div className="flex flex-wrap justify-center gap-8 text-[11px] font-medium uppercase tracking-widest">
+            <span className="text-[#a8c8de]/30">© 2026 OrgClinic Advisory</span>
+            <a href="#" className="transition-colors hover:text-white">Privacy</a>
+            <a href="#" className="transition-colors hover:text-white">Compliance</a>
+            <a href="#" className="transition-colors hover:text-white">Cookies</a>
           </div>
-          
-          <div className="flex items-center gap-3 rounded-full bg-zinc-900/50 px-4 py-2 border border-zinc-800">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Based in</span>
-            <span className="flex items-center gap-2 text-xs font-bold text-zinc-300">
-               <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="20" height="12" fill="#0051BA"/>
-                <path d="M0 12L20 0" stroke="#FCD116" strokeWidth="2"/>
-                <path d="M0 0L20 12" fill="#216430"/>
-                <rect width="20" height="6" fill="#0051BA"/>
-                <path d="M0 12L20 0H0V12Z" fill="#216430"/>
-                <path d="M0 6.5L20 -5.5" stroke="#FCD116" strokeWidth="1.5"/>
-              </svg>
-              Solomon Islands
-            </span>
+          <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#a8c8de]/40">Based in</span>
+            <span className="text-xs font-bold text-[#a8c8de]">🇸🇧 Solomon Islands</span>
           </div>
         </div>
       </div>

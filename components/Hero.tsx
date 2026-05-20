@@ -1,77 +1,97 @@
-import { ChevronRight, Activity, Shield, Users } from 'lucide-react';
-import Image from 'next/image';
+import { ChevronRight, Activity, Shield, Users } from "lucide-react";
+import Image from "next/image";
 
 function Hero() {
   return (
-    <header className="relative min-h-screen overflow-hidden flex items-center">
-      
-      {/* Background Image Layer */}
+    <section className="relative min-h-screen overflow-hidden flex items-center bg-[#002b47]">
+
+      {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          className="w-full h-full object-cover"
-          src='/helping-hand.jpg'
-          alt='helping-hand'
+          src="/helping-hand.jpg"
+          alt="OrgClinic — Helping hand"
           fill
-          priority // Added priority for LCP optimization
+          priority
+          className="object-cover opacity-15"
         />
-        {/* Added a subtle overlay back in case the image makes text hard to read */}
-        <div className="absolute inset-0 bg-white/40 dark:bg-zinc-950/40" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#002b47] via-[#002b47]/90 to-[#004771]/70" />
       </div>
 
-      <div className='max-w-7xl m-auto pt-32 w-full relative z-10'>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            
-            {/* Left Column: Content */}
-            <div className="max-w-2xl">
-              
-              {/* Added font-serif here */}
-              <h1 className="text-5xl capitalize md:text-6xl font-black font-serif text-zinc-900 dark:text-white leading-[1.1] mb-6">
-                Better Health for <br />
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#106c9d] to-[#004771]">
-                  your organization.
-                </span>
-              </h1>
+      {/* Decorative glows */}
+      <div className="absolute top-1/4 right-0 h-[500px] w-[500px] rounded-full bg-[#106c9d]/15 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-[#3b9fd4]/10 blur-3xl pointer-events-none" />
 
-              <div className="flex flex-wrap gap-4">
-                <button type="button" className="px-8 py-4 bg-[#106c9d] text-white font-bold rounded-lg shadow-lg shadow-[#106c9d]/20 hover:bg-[#004771] transition-all flex items-center group">
-                  Discover more
-                  <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                </button>
-              </div>
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-12 pt-36 pb-24">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+          {/* Left: content */}
+          <div>
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#3b9fd4]/30 bg-[#3b9fd4]/10 px-4 py-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#3b9fd4]" />
+              <span className="text-xs font-bold uppercase tracking-widest text-[#3b9fd4]">
+                Pacific Advisory Firm
+              </span>
             </div>
 
-            {/* Right Column: Visual Element */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4 relative z-10">
-                <div className="p-6 bg-white/90 dark:bg-zinc-900/10 backdrop-blur-md rounded-2xl shadow-xl mt-8">
-                  <Activity className="text-[#106c9d] mb-4" size={32} />
-                  {/* Applied font-serif to sub-headings for consistency */}
-                  <h3 className="font-bold font-serif text-zinc-900 dark:text-white">Diagnostics</h3>
-                  <p className="text-sm text-zinc-500">Identifying core structural gaps.</p>
-                </div>
-                <div className="p-6 bg-white/90 dark:bg-zinc-900/10 backdrop-blur-md rounded-2xl shadow-xl ">
-                  <Shield className="text-[#004771] mb-4" size={32} />
-                  <h3 className="font-bold font-serif text-zinc-900 dark:text-white">Integrity</h3>
-                  <p className="text-sm text-zinc-500">Building ethical frameworks.</p>
-                </div>
-                <div className="p-6 bg-white/90 dark:bg-zinc-900/10 backdrop-blur-md rounded-2xl shadow-xl col-span-2 flex items-center gap-6">
-                  <div className="h-12 w-12 rounded-full bg-[#106c9d]/10 flex items-center justify-center shrink-0">
-                    <Users className="text-[#106c9d]" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-bold font-serif text-zinc-900 dark:text-white">Capacity Building</h3>
-                    <p className="text-sm text-zinc-500">Empowering local teams for long-term impact.</p>
-                  </div>
-                </div>
+            <h1 className="mb-6 text-5xl font-black font-serif text-white leading-[1.05] md:text-6xl lg:text-7xl">
+              Better Health<br />
+              for Your{" "}
+              <span className="text-[#3b9fd4]">Organization.</span>
+            </h1>
+
+            <p className="mb-10 max-w-lg text-lg leading-relaxed text-[#a8c8de]">
+              OrgClinic delivers institutional diagnostics and strategic advisory to Solomon Islands organizations — building resilience from the inside out.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#106c9d] px-8 py-4 font-bold text-white shadow-lg shadow-[#106c9d]/30 transition-all hover:bg-[#3b9fd4] hover:-translate-y-0.5 active:scale-95"
+              >
+                Book a Consultation
+                <ChevronRight size={18} />
+              </a>
+              <a
+                href="#services"
+                className="inline-flex items-center gap-2 rounded-xl border-2 border-white/20 px-8 py-4 font-bold text-white transition-all hover:border-white/40 hover:bg-white/5"
+              >
+                Our Services
+              </a>
+            </div>
+          </div>
+
+          {/* Right: floating cards */}
+          <div className="hidden lg:flex flex-col gap-4">
+            <div className="rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 p-6 flex items-center gap-5">
+              <div className="h-12 w-12 rounded-xl bg-[#106c9d] flex items-center justify-center shrink-0">
+                <Activity className="text-white" size={22} />
+              </div>
+              <div>
+                <p className="font-bold text-white">Organizational Health Audits</p>
+                <p className="text-sm text-[#a8c8de]">Deep diagnostics to surface root causes</p>
               </div>
             </div>
-
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 p-6">
+                <Shield className="text-[#3b9fd4] mb-3" size={26} />
+                <h3 className="font-bold text-white mb-1">Governance</h3>
+                <p className="text-sm text-[#a8c8de]">Ethical frameworks that last</p>
+              </div>
+              <div className="rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 p-6">
+                <Users className="text-[#3b9fd4] mb-3" size={26} />
+                <h3 className="font-bold text-white mb-1">Capacity</h3>
+                <p className="text-sm text-[#a8c8de]">Empowering local leadership</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Scroll cue */}
+        <div className="mt-20 flex justify-center">
+          <div className="h-12 w-px bg-linear-to-b from-white/20 to-transparent" />
+        </div>
       </div>
-    </header>
+    </section>
   );
 }
 

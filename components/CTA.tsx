@@ -1,46 +1,42 @@
-import { ChevronRight, Mail, Phone } from "lucide-react";
+import { ChevronRight, Phone } from "lucide-react";
 
 function CTA() {
   return (
-    <section className="relative px-6 py-24 md:px-12 overflow-hidden bg-[#004771]">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 right-0 h-full w-1/2 bg-[#106c9d] skew-x-12 translate-x-32 opacity-20" />
-        {/* Subtle grid or topography overlay could go here */}
-        <div className="absolute inset-0 opacity-10" 
-             style={{ backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`, backgroundSize: '40px 40px' }} 
-        />
-      </div>
+    <section className="relative overflow-hidden bg-[#002b47] px-6 py-28 md:px-12">
+      {/* Decorative glows */}
+      <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-[#004771] opacity-60 blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-[#106c9d] opacity-20 blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-5xl rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 md:p-16 text-center shadow-2xl">
-        <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-white">
-          <Mail size={32} />
+      <div className="relative z-10 mx-auto max-w-4xl text-center">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#3b9fd4]/30 bg-[#3b9fd4]/10 px-4 py-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#3b9fd4]" />
+          <span className="text-xs font-bold uppercase tracking-widest text-[#3b9fd4]">
+            Free Consultation Available
+          </span>
         </div>
 
-        <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-          Transform Your <span className="text-[#106c9d]">Organizational Outlook.</span>
+        <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-white leading-tight md:text-5xl lg:text-6xl">
+          Ready to Transform<br />
+          <span className="text-[#3b9fd4]">Your Organization?</span>
         </h2>
-        
-        <p className="mx-auto mb-12 max-w-2xl text-lg text-zinc-300 md:text-xl leading-relaxed">
-          Whether you’re a local NGO or a government agency, our diagnostic approach uncovers the path to sustainable growth. Let’s start the conversation.
+
+        <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-[#a8c8de]">
+          Whether you&apos;re a local NGO or a government agency, our diagnostic approach uncovers the path to sustainable growth. Let&apos;s start the conversation.
         </p>
-        
-        <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-          <a 
-            href="#contact" 
-            className="group inline-flex items-center rounded-xl bg-[#106c9d] px-10 py-5 text-lg font-bold text-white shadow-2xl shadow-[#106c9d]/20 transition-all hover:bg-white hover:text-[#004771] active:scale-95"
+
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#106c9d] px-8 py-4 font-bold text-white shadow-2xl shadow-[#106c9d]/30 transition-all hover:bg-[#3b9fd4] hover:-translate-y-0.5 active:scale-95"
           >
-            Request a Free Consultation 
-            <ChevronRight size={22} className="ml-2 transition-transform group-hover:translate-x-1" />
+            Request a Free Consultation
+            <ChevronRight size={18} />
           </a>
-          
-          <a 
-            href="tel:+67700000" 
-            className="flex items-center gap-2 text-white font-semibold hover:text-[#106c9d] transition-colors"
+          <a
+            href="tel:+67723000"
+            className="inline-flex items-center gap-3 rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-white transition-all hover:border-white/40 hover:bg-white/5"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20">
-              <Phone size={18} />
-            </div>
+            <Phone size={18} />
             Speak with an Advisor
           </a>
         </div>

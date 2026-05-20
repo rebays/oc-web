@@ -1,79 +1,84 @@
 import { Globe, Award, Users, CheckCircle, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
+const pillars = [
+  { label: "Deep Local Market Understanding", icon: <Globe size={16} /> },
+  { label: "Actionable & Sustainable Solutions", icon: <Award size={16} /> },
+  { label: "Community-Centric Approach", icon: <Users size={16} /> },
+  { label: "Ethical & Transparent Practices", icon: <CheckCircle size={16} /> },
+];
+
 function WhyUs() {
   return (
-    <section id="about" className="relative bg-white px-6 py-24 dark:bg-zinc-950 md:px-12 overflow-hidden">
-      {/* Subtle Background Text for Texture */}
-      <div className="absolute -bottom-10 -left-10 select-none opacity-[0.02] dark:opacity-[0.05]">
-        <h2 className="text-[12rem] font-black tracking-tighter">COMMITMENT</h2>
-      </div>
+    <section id="about" className="bg-white px-6 py-28 md:px-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-16 lg:flex-row">
-        
-        {/* Visual Column */}
-        <div className="relative w-full flex-1 group">
-          <div className="relative h-125 w-full overflow-hidden rounded-2xl">
-            <Image 
-              src="https://images.unsplash.com/photo-1629828552784-259160352ef2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80"
-              alt="Solomon Islands Landscape"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-linear-to-t from-[#004771]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-            
-            {/* Floating Stats/Badge */}
-            <div className="absolute bottom-6 left-6 right-6 p-6 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl text-white">
-              <p className="text-sm font-medium uppercase tracking-widest opacity-80 mb-1">Our Mission</p>
-              <p className="text-xl font-bold italic">&quot;Empowering the Solomon Islands through structural integrity and local wisdom.&quot;</p>
+          {/* Image */}
+          <div className="relative">
+            <div className="relative h-[560px] overflow-hidden rounded-3xl">
+              <Image
+                src="https://images.unsplash.com/photo-1629828552784-259160352ef2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80"
+                alt="Solomon Islands Landscape"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-[#002b47]/90 via-[#002b47]/20 to-transparent" />
+
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-widest text-[#3b9fd4]">Our Mission</p>
+                  <p className="font-semibold leading-snug text-white">
+                    &ldquo;Empowering the Solomon Islands through structural integrity and local wisdom.&rdquo;
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating stat */}
+            <div className="absolute -right-6 top-10 hidden rounded-2xl bg-[#004771] p-6 shadow-2xl lg:block">
+              <p className="text-3xl font-black text-white">20+</p>
+              <p className="text-sm font-medium text-[#3b9fd4]">Years of<br />Pacific expertise</p>
             </div>
           </div>
-          
-          {/* Decorative geometric accent */}
-          <div className="absolute -top-4 -right-4 -z-10 h-32 w-32 rounded-full bg-[#106c9d]/10 blur-3xl" />
-        </div>
 
-        {/* Content Column */}
-        <div className="flex-1 lg:pl-10">
-          <div className="mb-6 flex items-center gap-3">
-            <span className="h-px w-10 bg-[#106c9d]" />
-            <span className="text-sm font-bold uppercase tracking-widest text-[#106c9d]">Our Foundation</span>
-          </div>
+          {/* Content */}
+          <div>
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-px w-8 bg-[#106c9d]" />
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#106c9d]">Our Foundation</span>
+            </div>
 
-          <h2 className="mb-8 text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white md:text-5xl leading-[1.1]">
-            Bridging Local Wisdom with <br />
-            <span className="text-[#106c9d]">Global Excellence.</span>
-          </h2>
+            <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-[#002b47] leading-tight md:text-5xl">
+              Local Wisdom.<br />
+              <span className="text-[#106c9d]">Global Standards.</span>
+            </h2>
 
-          <p className="mb-10 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
-            OrgClinic is a specialized advisory firm deeply rooted in the Solomon Islands. We understand that sustainable growth isn&apos;t just about efficiency—it&apos;s about building organizations that respect local culture while competing at international standards.
-          </p>
+            <p className="mb-10 text-base leading-relaxed text-zinc-600">
+              OrgClinic is a specialized advisory firm deeply rooted in the Solomon Islands. We understand that sustainable growth isn&apos;t just about efficiency — it&apos;s about building organizations that respect local culture while competing at international standards.
+            </p>
 
-          <div className="space-y-6">
-            {[
-              { label: "Deep Local Market Understanding", icon: <Globe size={18} /> },
-              { label: "Actionable & Sustainable Solutions", icon: <Award size={18} /> },
-              { label: "Community-Centric Approach", icon: <Users size={18} /> },
-              { label: "Ethical & Transparent Practices", icon: <CheckCircle size={18} /> }
-            ].map((item, i) => (
-              <div 
-                key={i} 
-                className="group flex items-center gap-4 border-l-2 border-zinc-100 py-1 pl-6 transition-all hover:border-[#106c9d]"
-              >
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#106c9d]/5 text-[#106c9d] transition-colors group-hover:bg-[#106c9d] group-hover:text-white">
-                  {item.icon}
+            <div className="mb-10 space-y-3">
+              {pillars.map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-4 rounded-xl border border-[#dbeeff] bg-[#f0f8ff] px-5 py-4"
+                >
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#dbeeff] text-[#004771]">
+                    {item.icon}
+                  </div>
+                  <span className="text-sm font-semibold text-[#002b47]">{item.label}</span>
                 </div>
-                <span className="text-lg font-semibold text-zinc-800 dark:text-zinc-200 transition-colors group-hover:text-[#106c9d]">
-                  {item.label}
-                </span>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <button type="button" className="mt-12 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#004771] dark:text-[#106c9d] hover:underline decoration-2 underline-offset-8 transition-all">
-            Read our full story <ArrowRight size={16} />
-          </button>
+            <button
+              type="button"
+              className="inline-flex items-center gap-2 text-sm font-bold text-[#004771] transition-colors hover:text-[#106c9d]"
+            >
+              Read our full story <ArrowRight size={16} />
+            </button>
+          </div>
         </div>
       </div>
     </section>
