@@ -28,11 +28,6 @@ function Testimonials() {
 
         {/* Header */}
         <div className="mb-16 text-center">
-          <div className="mb-4 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-[#106c9d]" />
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#106c9d]">Client Perspectives</span>
-            <span className="h-px w-8 bg-[#106c9d]" />
-          </div>
           <h2 className="text-4xl font-extrabold tracking-tight text-[#002b47] md:text-5xl">
             Trusted by the <span className="text-[#106c9d]">Pacific&apos;s Leaders.</span>
           </h2>
