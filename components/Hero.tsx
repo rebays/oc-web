@@ -33,7 +33,7 @@ function Hero() {
             </h1>
 
             <p className="mb-10 max-w-lg text-lg leading-relaxed text-[#a8c8de]">
-              OrgClinic delivers institutional diagnostics and strategic advisory to Solomon Islands organizations — building resilience from the inside out.
+              Institutional diagnostics and strategic advisory for Solomon Islands organizations.
             </p>
 
             <div className="flex flex-wrap gap-4">
