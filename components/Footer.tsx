@@ -136,10 +136,6 @@ function Footer() {
             <a href="#" className="transition-colors hover:text-white">Compliance</a>
             <a href="#" className="transition-colors hover:text-white">Cookies</a>
           </div>
-          <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[#a8c8de]/40">Based in</span>
-            <span className="text-xs font-bold text-[#a8c8de]">🇸🇧 Solomon Islands</span>
-          </div>
         </div>
       </div>
     </footer>
