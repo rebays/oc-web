@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import Header from "@/components/Header";
-import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 import CTA from "@/components/CTA";
 import Testimonials from "@/components/Testimonials";
@@ -13,7 +12,6 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <Header />
       <Hero />
-      <Services />
       <WhyUs />
       <CTA />
       <Testimonials />
