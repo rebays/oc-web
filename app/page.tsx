@@ -5,6 +5,8 @@ import WhyUs from "@/components/WhyUs";
 import WhoWeAre from "@/components/WhoWeAre";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import CTA from "@/components/CTA";
+import Publications from "@/components/Publications";
+import LatestArticles from "@/components/LatestArticles";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,6 +19,8 @@ export default function Home() {
       <WhoWeAre />
       <FeaturedProjects />
       <CTA />
+      <Publications />
+      <LatestArticles />
       <Footer />
     </main>
   );
