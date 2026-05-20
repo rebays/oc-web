@@ -1,4 +1,4 @@
-import { ChevronRight, Activity, Shield, Users } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 function Hero() {
@@ -47,30 +47,6 @@ function Hero() {
             </div>
           </div>
 
-          {/* Right: floating cards */}
-          <div className="hidden lg:flex flex-col gap-4">
-            <div className="rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 p-6 flex items-center gap-5">
-              <div className="h-12 w-12 rounded-xl bg-[#106c9d] flex items-center justify-center shrink-0">
-                <Activity className="text-white" size={22} />
-              </div>
-              <div>
-                <p className="font-bold text-white">Organizational Health Audits</p>
-                <p className="text-sm text-[#a8c8de]">Deep diagnostics to surface root causes</p>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 p-6">
-                <Shield className="text-[#3b9fd4] mb-3" size={26} />
-                <h3 className="font-bold text-white mb-1">Governance</h3>
-                <p className="text-sm text-[#a8c8de]">Ethical frameworks that last</p>
-              </div>
-              <div className="rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 p-6">
-                <Users className="text-[#3b9fd4] mb-3" size={26} />
-                <h3 className="font-bold text-white mb-1">Capacity</h3>
-                <p className="text-sm text-[#a8c8de]">Empowering local leadership</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Scroll cue */}
