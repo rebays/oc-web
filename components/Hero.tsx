@@ -22,7 +22,7 @@ function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 md:px-12 pt-52 pb-40 text-center">
 
-        <h1 className="mb-6 text-4xl font-black font-serif text-white leading-[1.05] md:text-5xl lg:text-6xl">
+        <h1 className="mb-6 text-4xl font-black text-white leading-[1.05] md:text-5xl lg:text-6xl">
           Better Health<br />
           for Your{" "}
           <span className="text-[#3b9fd4]">Organization.</span>

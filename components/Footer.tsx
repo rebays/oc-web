@@ -10,7 +10,7 @@ function Footer() {
 
           {/* Logo */}
           <div className="flex flex-col gap-4">
-            <span className="text-xl font-bold tracking-tight text-white">OrgClinic</span>
+            <span className="text-xl font-bold tracking-tight text-white">orgclinic</span>
             <p className="max-w-xs text-sm leading-relaxed">
               Partnering with Solomon Islands leaders to build resilient, high-impact organizations.
             </p>
