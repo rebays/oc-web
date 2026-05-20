@@ -40,14 +40,14 @@ export default function Header() {
         <button
           type="button"
           aria-label="Open menu"
-          className={`flex items-center gap-2.5 rounded-xl px-5 py-3 text-sm font-bold transition-colors ${
-            scrolled
-              ? "bg-[#004771] text-white hover:bg-[#106c9d]"
-              : "bg-white/15 text-white hover:bg-white/25"
-          }`}
+          className="transition-opacity hover:opacity-80"
         >
-          Menu
-          <Menu size={20} />
+          <div className={`flex items-center gap-2.5 rounded-xl px-5 py-3 text-sm font-bold ${
+            scrolled ? "bg-[#004771] text-white" : "bg-white/20 text-white backdrop-blur-sm"
+          }`}>
+            Menu
+            <Menu size={20} />
+          </div>
         </button>
       </nav>
     </header>
