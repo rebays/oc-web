@@ -41,10 +41,6 @@ function Hero() {
           </a>
         </div>
 
-        {/* Scroll cue */}
-        <div className="mt-20 flex justify-center">
-          <div className="h-12 w-px bg-linear-to-b from-white/20 to-transparent" />
-        </div>
       </div>
     </section>
   );
