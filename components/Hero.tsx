@@ -5,7 +5,7 @@ function Hero() {
     <section className="relative min-h-[115vh] flex items-center bg-white">
 
       {/* Image container — inset from the bottom, rounded bottom corners */}
-      <div className="absolute inset-x-0 top-0 bottom-16 z-0 overflow-hidden rounded-b-[3rem]">
+      <div className="absolute inset-x-0 top-0 bottom-16 z-0 overflow-hidden" style={{ borderRadius: "0 0 50% 50% / 0 0 5rem 5rem" }}>
         <Image
           src="/helping-hand.jpg"
           alt="OrgClinic — Helping hand"

@@ -1,6 +1,9 @@
 import Hero from "@/components/Hero";
 import Header from "@/components/Header";
+import WhoWeWorkWith from "@/components/WhoWeWorkWith";
 import WhyUs from "@/components/WhyUs";
+import WhoWeAre from "@/components/WhoWeAre";
+import FeaturedProjects from "@/components/FeaturedProjects";
 import CTA from "@/components/CTA";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
@@ -11,7 +14,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <Header />
       <Hero />
+      <WhoWeWorkWith />
       <WhyUs />
+      <WhoWeAre />
+      <FeaturedProjects />
       <CTA />
       <Team />
       <Contact />
