@@ -38,7 +38,7 @@ function Publications() {
           </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="mb-12 grid gap-4 sm:grid-cols-2">
           {publications.map((pub, i) => (
             <div
               key={i}
@@ -65,6 +65,15 @@ function Publications() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center">
+          <a
+            href="#"
+            className="inline-flex items-center rounded-full bg-[#106c9d] px-8 py-4 font-bold text-white shadow-lg shadow-[#106c9d]/30 transition-all hover:bg-[#004771] hover:-translate-y-0.5 active:scale-95"
+          >
+            View All Publications
+          </a>
         </div>
 
       </div>

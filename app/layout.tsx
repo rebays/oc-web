@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OrgClinic",
-  description: "The official OrgClinic Website.",
+  title: {
+    default: "OrgClinic — Institutional Diagnostics & Strategic Advisory",
+    template: "%s — OrgClinic",
+  },
+  description:
+    "OrgClinic is a specialised advisory firm delivering institutional diagnostics, strategic planning, and capacity building across Solomon Islands and the Pacific.",
 };
 
 export default function RootLayout({

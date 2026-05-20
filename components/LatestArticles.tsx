@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
 const articles = [
   {
     category: "Leadership",
@@ -56,9 +54,9 @@ function LatestArticles() {
         <div className="mt-10 text-center">
           <a
             href="#"
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#106c9d] transition-colors hover:text-[#004771]"
+            className="inline-flex items-center rounded-full bg-[#106c9d] px-8 py-4 font-bold text-white shadow-lg shadow-[#106c9d]/30 transition-all hover:bg-[#004771] hover:-translate-y-0.5 active:scale-95"
           >
-            View all <ArrowRight size={15} />
+            View All Articles
           </a>
         </div>
 
