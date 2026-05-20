@@ -7,26 +7,26 @@ import { Link2, Mail } from "lucide-react";
 const team = [
   {
     name: "Karl Saliga",
-    role: "Lead Consultant & Founder",
-    bio: "With over 20 years in organizational development across the Pacific, Karl specializes in institutional reform and diagnostic consultancy for high-impact organizations.",
+    role: "Director",
+    bio: "20+ years in organisational development across the Pacific, specialising in institutional reform.",
     img: "/karl.png",
   },
   {
     name: "Dr. Jerry B. Siota",
-    role: "Senior Strategy Advisor",
-    bio: "A specialist in strategic planning and project management, Dr. Siota drives structural results for both public sector institutions and private enterprises.",
+    role: "Director",
+    bio: "Specialist in strategic planning and project management across public and private sectors.",
     img: "/jerry.png",
   },
   {
     name: "Liam Sau",
-    role: "Project Operations Manager",
-    bio: "Liam oversees complex project delivery and operational workflows, ensuring that organizational diagnostics translate into actionable, sustainable results.",
+    role: "Director",
+    bio: "Oversees project delivery and operations, translating diagnostics into actionable results.",
     img: "/liam.jpg",
   },
   {
     name: "Dr. Derek Mane",
-    role: "Capacity Building Specialist",
-    bio: "Dr. Mane designs and delivers high-level training frameworks, fostering leadership and technical skill growth within the Solomon Islands' workforce.",
+    role: "Director",
+    bio: "Designs training frameworks that build leadership and technical capability across Solomon Islands.",
     img: "/derek.png",
   },
 ];
@@ -47,7 +47,7 @@ function Team() {
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#002b47]">
-            Our Board of Directors
+            The Board
           </h2>
         </div>
 
