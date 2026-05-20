@@ -38,8 +38,7 @@ function FeaturedProjects() {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[#106c9d]">Our Work</p>
-          <h2 className="text-4xl font-extrabold tracking-tight text-[#002b47] md:text-5xl">Featured Projects</h2>
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#002b47]">Our Work</h2>
         </div>
 
         {/* Main featured project */}

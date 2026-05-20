@@ -3,10 +3,8 @@ function WhoWeAre() {
     <section id="who-we-are" className="bg-white px-6 py-28 md:px-12">
       <div className="mx-auto max-w-2xl text-center">
 
-        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[#106c9d]">Who We Are</p>
-        <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-[#002b47] md:text-5xl">
-          Built for the Pacific.<br />
-          <span className="text-[#106c9d]">Rooted in Solomon Islands.</span>
+        <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-[#002b47]">
+          Who We Are
         </h2>
 
         <p className="mb-10 text-base leading-relaxed text-zinc-500">

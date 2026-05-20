@@ -1,4 +1,3 @@
-import { ChevronRight, Phone } from "lucide-react";
 
 function CTA() {
   return (
@@ -8,14 +7,7 @@ function CTA() {
       <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-[#106c9d] opacity-20 blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#3b9fd4]/30 bg-[#3b9fd4]/10 px-4 py-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#3b9fd4]" />
-          <span className="text-xs font-bold uppercase tracking-widest text-[#3b9fd4]">
-            Free Consultation Available
-          </span>
-        </div>
-
-        <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-white leading-tight md:text-5xl lg:text-6xl">
+        <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-white leading-tight">
           Ready to Transform<br />
           <span className="text-[#3b9fd4]">Your Organization?</span>
         </h2>
@@ -24,22 +16,12 @@ function CTA() {
           Whether you&apos;re a local NGO or a government agency, our diagnostic approach uncovers the path to sustainable growth. Let&apos;s start the conversation.
         </p>
 
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-xl bg-[#106c9d] px-8 py-4 font-bold text-white shadow-2xl shadow-[#106c9d]/30 transition-all hover:bg-[#3b9fd4] hover:-translate-y-0.5 active:scale-95"
-          >
-            Request a Free Consultation
-            <ChevronRight size={18} />
-          </a>
-          <a
-            href="tel:+67723000"
-            className="inline-flex items-center gap-3 rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-white transition-all hover:border-white/40 hover:bg-white/5"
-          >
-            <Phone size={18} />
-            Speak with an Advisor
-          </a>
-        </div>
+        <a
+          href="#contact"
+          className="inline-flex items-center rounded-xl bg-[#106c9d] px-8 py-4 font-bold text-white shadow-2xl shadow-[#106c9d]/30 transition-all hover:bg-[#3b9fd4] hover:-translate-y-0.5 active:scale-95"
+        >
+          Request a Free Consultation
+        </a>
       </div>
     </section>
   );

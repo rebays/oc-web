@@ -33,8 +33,7 @@ function Publications() {
       <div className="mx-auto max-w-5xl">
 
         <div className="mb-12 text-center">
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[#106c9d]">Knowledge</p>
-          <h2 className="text-4xl font-extrabold tracking-tight text-[#002b47] md:text-5xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#002b47]">
             Publications & Reports
           </h2>
         </div>

@@ -10,9 +10,8 @@ function WhyUs() {
     <section id="about" className="bg-[#f0f8ff] px-6 py-28 md:px-12">
       <div className="mx-auto max-w-4xl text-center">
 
-        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[#106c9d]">At a Glance</p>
-        <h2 className="mb-5 text-4xl font-extrabold tracking-tight text-[#002b47] md:text-5xl">
-          Our Impact in Numbers
+        <h2 className="mb-5 text-3xl font-extrabold tracking-tight text-[#002b47]">
+          At a Glance
         </h2>
         <p className="mb-16 text-base leading-relaxed text-zinc-500 max-w-xl mx-auto">
           Over a decade of on-the-ground advisory work across the Pacific, delivering measurable outcomes for governments, NGOs, and institutions.

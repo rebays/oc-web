@@ -29,18 +29,7 @@ function LatestArticles() {
     <section id="articles" className="bg-[#f0f8ff] px-6 py-28 md:px-12">
       <div className="mx-auto max-w-5xl">
 
-        <div className="mb-12 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[#106c9d]">Insights</p>
-            <h2 className="text-4xl font-extrabold tracking-tight text-[#002b47] md:text-5xl">Latest Articles</h2>
-          </div>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#106c9d] transition-colors hover:text-[#004771]"
-          >
-            View all <ArrowRight size={15} />
-          </a>
-        </div>
+        <h2 className="mb-12 text-3xl font-extrabold tracking-tight text-[#002b47] text-center">Latest Articles</h2>
 
         <div className="grid gap-4 sm:grid-cols-3">
           {articles.map((article, i) => (
@@ -62,6 +51,15 @@ function LatestArticles() {
               </div>
             </a>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#106c9d] transition-colors hover:text-[#004771]"
+          >
+            View all <ArrowRight size={15} />
+          </a>
         </div>
 
       </div>

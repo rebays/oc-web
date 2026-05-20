@@ -17,7 +17,6 @@ function WhoWeWorkWith() {
   return (
     <section className="bg-white py-20">
       <div className="mb-10 text-center">
-        <p className="mb-2 text-xs font-bold uppercase tracking-widest text-[#106c9d]">Partners & Clients</p>
         <h2 className="text-3xl font-extrabold text-[#002b47]">Who We Work With</h2>
       </div>
 

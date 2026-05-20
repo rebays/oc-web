@@ -16,7 +16,11 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > window.innerHeight);
+    const handleScroll = () => {
+      const atTop = window.scrollY <= window.innerHeight;
+      const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 10;
+      setScrolled(!atTop && !atBottom);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

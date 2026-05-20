@@ -1,18 +1,56 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
+const slides = [
+  { type: "image", src: "/helping-hand.jpg", alt: "OrgClinic — Helping hand" },
+  { type: "video", src: "/hero.mp4" },
+];
 
 function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent(prev => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-[115vh] flex items-center bg-white">
 
-      {/* Image container — inset from the bottom, rounded bottom corners */}
+      {/* Carousel container */}
       <div className="absolute inset-x-0 top-0 bottom-16 z-0 overflow-hidden" style={{ borderRadius: "0 0 50% 50% / 0 0 5rem 5rem" }}>
-        <Image
-          src="/helping-hand.jpg"
-          alt="OrgClinic — Helping hand"
-          fill
-          priority
-          className="object-cover"
-        />
+
+        {slides.map((slide, i) => (
+          <div
+            key={i}
+            className="absolute inset-0 transition-opacity duration-1000"
+            style={{ opacity: i === current ? 1 : 0 }}
+          >
+            {slide.type === "video" ? (
+              <video
+                src={slide.src}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            ) : (
+              <Image
+                src={slide.src}
+                alt={slide.alt!}
+                fill
+                priority
+                className="object-cover"
+              />
+            )}
+          </div>
+        ))}
+
         <div className="absolute inset-0 bg-linear-to-br from-[#002b47]/80 via-[#002b47]/60 to-[#004771]/50" />
 
         {/* Decorative glows */}
@@ -39,6 +77,21 @@ function Hero() {
           >
             Book a Consultation
           </a>
+        </div>
+
+        {/* Slide indicators */}
+        <div className="mt-10 flex justify-center gap-2">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              aria-label={`Go to slide ${i + 1}`}
+              onClick={() => setCurrent(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === current ? "w-8 bg-white" : "w-1.5 bg-white/40"
+              }`}
+            />
+          ))}
         </div>
 
       </div>
