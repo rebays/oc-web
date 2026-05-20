@@ -1,118 +1,62 @@
-import { Shield, MapPin, Phone, Link2, Globe, MessageCircle } from "lucide-react";
-
-const socialLinks = [
-  { icon: <Link2 size={16} />, label: "LinkedIn" },
-  { icon: <Globe size={16} />, label: "Web" },
-  { icon: <MessageCircle size={16} />, label: "Social" },
-];
-
-const footerLinks = [
-  {
-    title: "The Firm",
-    links: [
-      ["About OrgClinic", "#about"],
-      ["Leadership", "#team"],
-      ["Our Methodology", "#"],
-      ["Impact Report", "#"],
-    ],
-  },
-  {
-    title: "Expertise",
-    links: [
-      ["Institutional Health", "#services"],
-      ["Strategic Advisory", "#services"],
-      ["Capacity Building", "#services"],
-      ["Governance", "#services"],
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      ["Case Studies", "#"],
-      ["Policy Briefs", "#"],
-      ["Diagnostic Tools", "#"],
-      ["Blog", "#"],
-    ],
-  },
-];
+import { Shield, Link2, Globe, MessageCircle } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-[#002b47] pb-12 pt-24 text-[#a8c8de]">
-      <div className="mx-auto max-w-7xl px-6 md:px-12">
+    <footer className="bg-[#002b47] px-8 py-16 text-[#a8c8de]">
+      <div className="mx-auto max-w-7xl">
 
-        {/* Top */}
-        <div className="grid gap-16 border-b border-white/10 pb-20 lg:grid-cols-2 lg:gap-24">
+        {/* 3 columns */}
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
 
-          {/* Brand */}
-          <div>
-            <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#106c9d] text-white shadow-lg">
+          {/* Logo */}
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#106c9d] text-white">
                 <Shield size={20} />
               </div>
-              <div>
-                <span className="block text-xl font-bold tracking-tight text-white leading-none">OrgClinic</span>
-                <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[#3b9fd4]">Pacific Advisory</span>
-              </div>
+              <span className="text-xl font-bold tracking-tight text-white">OrgClinic</span>
             </div>
-            <p className="mb-8 max-w-sm leading-relaxed text-[#a8c8de]">
-              Partnering with Solomon Islands leaders to build resilient, transparent, and high-impact organizations through international best practices.
+            <p className="max-w-xs text-sm leading-relaxed">
+              Partnering with Solomon Islands leaders to build resilient, high-impact organizations.
             </p>
+          </div>
+
+          {/* Links */}
+          <div className="flex flex-col gap-4">
+            <h5 className="text-sm font-bold uppercase tracking-widest text-white">Links</h5>
+            <div className="flex flex-col gap-3 text-sm">
+              <a href="#about" className="transition-colors hover:text-white">About</a>
+              <a href="#team" className="transition-colors hover:text-white">Leadership</a>
+              <a href="#contact" className="transition-colors hover:text-white">Contact</a>
+              <a href="#" className="transition-colors hover:text-white">Privacy</a>
+            </div>
+          </div>
+
+          {/* Socials */}
+          <div className="flex flex-col gap-4">
+            <h5 className="text-sm font-bold uppercase tracking-widest text-white">Socials</h5>
             <div className="flex gap-3">
-              {socialLinks.map(({ icon, label }, i) => (
+              {[
+                { icon: <Link2 size={16} />, label: "LinkedIn" },
+                { icon: <Globe size={16} />, label: "Web" },
+                { icon: <MessageCircle size={16} />, label: "Social" },
+              ].map(({ icon, label }, i) => (
                 <a
                   key={i}
                   href="#"
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-[#a8c8de] transition-all hover:border-[#106c9d] hover:bg-[#106c9d] hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-all hover:border-[#106c9d] hover:bg-[#106c9d] hover:text-white"
                 >
                   {icon}
                 </a>
               ))}
             </div>
           </div>
-
         </div>
 
-        {/* Link columns */}
-        <div className="grid grid-cols-2 gap-12 py-20 md:grid-cols-4">
-          {footerLinks.map((col, i) => (
-            <div key={i} className="flex flex-col gap-5">
-              <h5 className="text-sm font-bold uppercase tracking-widest text-white">{col.title}</h5>
-              <div className="flex flex-col gap-3 text-sm">
-                {col.links.map(([label, href], j) => (
-                  <a key={j} href={href} className="transition-colors hover:text-white">
-                    {label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          {/* Address */}
-          <div className="flex flex-col gap-5">
-            <h5 className="text-sm font-bold uppercase tracking-widest text-white">Honiara HQ</h5>
-            <div className="flex flex-col gap-4 text-sm">
-              <div className="flex items-start gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-[#3b9fd4]" />
-                <span>Level 2, Mendana Avenue,<br />Honiara, Solomon Islands</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone size={16} className="shrink-0 text-[#3b9fd4]" />
-                <span>+677 23000</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div className="flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-10 md:flex-row">
-          <div className="flex flex-wrap justify-center gap-8 text-[11px] font-medium uppercase tracking-widest">
-            <span className="text-[#a8c8de]/30">© 2026 OrgClinic Advisory</span>
-            <a href="#" className="transition-colors hover:text-white">Privacy</a>
-            <a href="#" className="transition-colors hover:text-white">Compliance</a>
-            <a href="#" className="transition-colors hover:text-white">Cookies</a>
-          </div>
+        {/* Copyright */}
+        <div className="mt-16 border-t border-white/10 pt-8 text-xs text-[#a8c8de]/40">
+          © 2026 OrgClinic Consultancy. All rights reserved.
         </div>
       </div>
     </footer>
