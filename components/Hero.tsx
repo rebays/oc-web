@@ -26,13 +26,6 @@ function Hero() {
 
           {/* Left: content */}
           <div>
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#3b9fd4]/30 bg-[#3b9fd4]/10 px-4 py-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#3b9fd4]" />
-              <span className="text-xs font-bold uppercase tracking-widest text-[#3b9fd4]">
-                Pacific Advisory Firm
-              </span>
-            </div>
-
             <h1 className="mb-6 text-5xl font-black font-serif text-white leading-[1.05] md:text-6xl lg:text-7xl">
               Better Health<br />
               for Your{" "}
