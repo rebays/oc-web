@@ -36,13 +36,13 @@ export default function Header() {
         <nav className="flex w-full items-center justify-between px-8 py-5">
 
           {/* Logo */}
-          <a href="#" onClick={() => setMenuOpen(false)}>
+          <Link href="/" onClick={() => setMenuOpen(false)}>
             <span className={`text-2xl font-bold tracking-tight leading-none transition-colors duration-300 ${
               menuOpen ? "text-white" : scrolled ? "text-[#002b47]" : "text-white"
             }`}>
               orgclinic
             </span>
-          </a>
+          </Link>
 
           {/* Menu / Exit button */}
           <button
