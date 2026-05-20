@@ -44,12 +44,6 @@ function Hero() {
                 Book a Consultation
                 <ChevronRight size={18} />
               </a>
-              <a
-                href="#services"
-                className="inline-flex items-center gap-2 rounded-xl border-2 border-white/20 px-8 py-4 font-bold text-white transition-all hover:border-white/40 hover:bg-white/5"
-              >
-                Our Services
-              </a>
             </div>
           </div>
 
