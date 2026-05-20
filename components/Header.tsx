@@ -27,12 +27,8 @@ export default function Header() {
       >
         {/* Logo */}
         <a href="#">
-          <span
-            className={`text-lg font-bold tracking-tight leading-none transition-colors ${
-              scrolled ? "text-[#002b47]" : "text-white"
-            }`}
-          >
-            Org<span className="text-[#3b9fd4]">Clinic</span>
+          <span className="text-lg font-bold tracking-tight leading-none text-white">
+            orgclinic
           </span>
         </a>
 
