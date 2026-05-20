@@ -32,7 +32,7 @@ function Hero() {
               <span className="text-[#3b9fd4]">Organization.</span>
             </h1>
 
-            <p className="mb-10 max-w-lg text-lg leading-relaxed text-[#a8c8de]">
+            <p className="mb-10 max-w-lg text-2xl font-bold leading-relaxed text-[#a8c8de]">
               Institutional diagnostics and strategic advisory for Solomon Islands organizations.
             </p>
 
