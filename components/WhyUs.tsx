@@ -13,7 +13,7 @@ function WhyUs() {
         
         {/* Visual Column */}
         <div className="relative w-full flex-1 group">
-          <div className="relative h-[500px] w-full overflow-hidden rounded-2xl">
+          <div className="relative h-125 w-full overflow-hidden rounded-2xl">
             <Image 
               src="https://images.unsplash.com/photo-1629828552784-259160352ef2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80"
               alt="Solomon Islands Landscape"
@@ -21,7 +21,7 @@ function WhyUs() {
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
             {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#004771]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#004771]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
             
             {/* Floating Stats/Badge */}
             <div className="absolute bottom-6 left-6 right-6 p-6 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl text-white">

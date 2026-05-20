@@ -29,7 +29,7 @@ function Hero() {
               {/* Added font-serif here */}
               <h1 className="text-5xl capitalize md:text-6xl font-black font-serif text-zinc-900 dark:text-white leading-[1.1] mb-6">
                 Better Health for <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#106c9d] to-[#004771]">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#106c9d] to-[#004771]">
                   your organization.
                 </span>
               </h1>

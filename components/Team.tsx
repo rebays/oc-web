@@ -64,9 +64,9 @@ function Team() {
           {team.map((member, i) => (
             <div key={i} className="group relative">
               {/* Image Container */}
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+              <div className="relative aspect-4/5 w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
                 {failedImages.has(member.name) ? (
-                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#004771]/10 to-[#106c9d]/10">
+                  <div className="flex h-full w-full items-center justify-center bg-linear-to-br from-[#004771]/10 to-[#106c9d]/10">
                     <span className="text-5xl font-black text-[#004771]/40 dark:text-[#106c9d]/60 select-none">
                       {getInitials(member.name)}
                     </span>
@@ -102,7 +102,7 @@ function Team() {
                   <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
                     {member.name}
                   </h3>
-                  <div className="h-px flex-grow mx-4 bg-zinc-100 dark:bg-zinc-800" />
+                  <div className="h-px grow mx-4 bg-zinc-100 dark:bg-zinc-800" />
                 </div>
                 <p className="mt-1 text-sm font-bold uppercase tracking-widest text-[#106c9d]">
                   {member.role}
