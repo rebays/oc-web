@@ -1,7 +1,7 @@
 
 function CTA() {
   return (
-    <section className="relative overflow-hidden bg-[#002b47] px-6 py-28 md:px-12">
+    <section className="relative overflow-hidden bg-[#002b47] px-6 py-40 md:px-12">
       {/* Decorative glows */}
       <div className="absolute top-0 right-0 h-125 w-125 rounded-full bg-[#004771] opacity-60 blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-[#106c9d] opacity-20 blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />

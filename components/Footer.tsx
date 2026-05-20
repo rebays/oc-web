@@ -2,7 +2,7 @@ import { Link2, Globe, MessageCircle } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="border-t border-[#3b9fd4] bg-[#002b47] px-8 py-16 text-[#a8c8de]">
+    <footer className="border-t border-[#3b9fd4] bg-[#002b47] px-8 py-20 text-[#a8c8de]">
       <div className="mx-auto max-w-7xl">
 
         {/* 3 columns */}

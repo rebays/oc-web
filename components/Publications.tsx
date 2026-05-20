@@ -38,31 +38,31 @@ function Publications() {
           </h2>
         </div>
 
-        <div className="mb-12 grid gap-4 sm:grid-cols-2">
+        <div className="mb-12 flex flex-col gap-3">
           {publications.map((pub, i) => (
             <div
               key={i}
-              className="group flex flex-col gap-4 rounded-2xl border border-[#dbeeff] bg-[#f0f8ff] p-7 transition-all hover:border-[#106c9d]/40 hover:shadow-lg hover:shadow-[#004771]/6"
+              className="group flex items-center gap-6 rounded-2xl border border-[#dbeeff] bg-[#f0f8ff] px-7 py-5 transition-all hover:border-[#106c9d]/40 hover:shadow-lg hover:shadow-[#004771]/6"
             >
-              <div className="flex items-start justify-between gap-4">
-                <span className="rounded-full bg-[#dbeeff] px-3 py-1 text-xs font-bold text-[#004771]">
-                  {pub.category}
-                </span>
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-[#106c9d] shadow-sm transition-colors group-hover:bg-[#106c9d] group-hover:text-white">
-                  <FileText size={16} />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#106c9d] shadow-sm transition-colors group-hover:bg-[#106c9d] group-hover:text-white">
+                <FileText size={18} />
+              </div>
+              <div className="flex flex-1 flex-col gap-1 min-w-0">
+                <div className="flex items-center gap-3">
+                  <span className="rounded-full bg-[#dbeeff] px-3 py-0.5 text-xs font-bold text-[#004771]">
+                    {pub.category}
+                  </span>
+                  <span className="text-xs text-zinc-400">{pub.date}</span>
                 </div>
+                <h3 className="font-extrabold leading-snug text-[#002b47]">{pub.title}</h3>
+                <p className="text-sm leading-relaxed text-zinc-500">{pub.description}</p>
               </div>
-              <h3 className="font-extrabold leading-snug text-[#002b47]">{pub.title}</h3>
-              <p className="flex-1 text-sm leading-relaxed text-zinc-500">{pub.description}</p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-zinc-400">{pub.date}</span>
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#106c9d] transition-colors hover:text-[#004771]"
-                >
-                  <Download size={13} /> Download
-                </button>
-              </div>
+              <button
+                type="button"
+                className="shrink-0 inline-flex items-center gap-1.5 rounded-full border border-[#106c9d] px-4 py-1.5 text-xs font-bold text-[#106c9d] transition-all hover:bg-[#106c9d] hover:text-white"
+              >
+                <Download size={13} /> Download
+              </button>
             </div>
           ))}
         </div>

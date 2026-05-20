@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const articles = [
   {
     category: "Leadership",
@@ -34,18 +36,28 @@ function LatestArticles() {
             <a
               key={i}
               href="#"
-              className="group flex flex-col gap-4 rounded-2xl border border-[#dbeeff] bg-white p-7 transition-all hover:border-[#106c9d]/40 hover:shadow-lg hover:shadow-[#004771]/6"
+              className="group flex flex-col rounded-2xl border border-[#dbeeff] bg-white overflow-hidden transition-all hover:border-[#106c9d]/40 hover:shadow-lg hover:shadow-[#004771]/6"
             >
-              <span className="self-start rounded-full bg-[#dbeeff] px-3 py-1 text-xs font-bold text-[#004771]">
-                {article.category}
-              </span>
-              <h3 className="font-extrabold leading-snug text-[#002b47] transition-colors group-hover:text-[#106c9d]">
-                {article.title}
-              </h3>
-              <p className="flex-1 text-sm leading-relaxed text-zinc-500">{article.excerpt}</p>
-              <div className="flex items-center justify-between text-xs text-zinc-400">
-                <span>{article.date}</span>
-                <span>{article.readTime}</span>
+              <div className="relative h-48 w-full shrink-0">
+                <Image
+                  src="/helping-hand.jpg"
+                  alt={article.title}
+                  fill
+                  className="object-cover"
+                />
+                <span className="absolute top-3 left-3 rounded-full bg-[#dbeeff] px-3 py-1 text-xs font-bold text-[#004771]">
+                  {article.category}
+                </span>
+              </div>
+              <div className="flex flex-1 flex-col gap-4 p-7">
+                <h3 className="font-extrabold leading-snug text-[#002b47] transition-colors group-hover:text-[#106c9d]">
+                  {article.title}
+                </h3>
+                <p className="flex-1 text-sm leading-relaxed text-zinc-500">{article.excerpt}</p>
+                <div className="flex items-center justify-between text-xs text-zinc-400">
+                  <span>{article.date}</span>
+                  <span>{article.readTime}</span>
+                </div>
               </div>
             </a>
           ))}

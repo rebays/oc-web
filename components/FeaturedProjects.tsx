@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const featured = {
   tag: "Governance & Institutional Reform",
   title: "Strengthening the Office of the Prime Minister",
@@ -38,23 +40,33 @@ function FeaturedProjects() {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#002b47]">Our Work</h2>
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#002b47]">Featured Projects</h2>
         </div>
 
         {/* Main featured project */}
-        <div className="mb-6 rounded-3xl bg-[#002b47] p-10 md:p-14">
-          <span className="mb-4 inline-block rounded-full bg-[#106c9d]/30 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#3b9fd4]">
-            {featured.tag}
-          </span>
-          <h3 className="mb-5 text-2xl font-extrabold leading-snug text-white md:text-3xl">
-            {featured.title}
-          </h3>
-          <p className="mb-8 max-w-2xl text-base leading-relaxed text-[#a8c8de]">
-            {featured.description}
-          </p>
-          <div className="flex flex-wrap items-center gap-6 text-sm text-[#a8c8de]/70">
-            <span><span className="font-semibold text-[#a8c8de]">Client:</span> {featured.client}</span>
-            <span><span className="font-semibold text-[#a8c8de]">Year:</span> {featured.year}</span>
+        <div className="mb-6 rounded-3xl bg-[#002b47] overflow-hidden flex flex-col md:flex-row">
+          <div className="relative w-full md:w-72 shrink-0 h-80 md:h-auto">
+            <Image
+              src="/helping-hand.jpg"
+              alt={featured.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-10 md:p-14">
+            <span className="mb-4 inline-block rounded-full bg-[#106c9d]/30 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#3b9fd4]">
+              {featured.tag}
+            </span>
+            <h3 className="mb-5 text-2xl font-extrabold leading-snug text-white md:text-3xl">
+              {featured.title}
+            </h3>
+            <p className="mb-8 max-w-2xl text-base leading-relaxed text-[#a8c8de]">
+              {featured.description}
+            </p>
+            <div className="flex flex-wrap items-center gap-6 text-sm text-[#a8c8de]/70">
+              <span><span className="font-semibold text-[#a8c8de]">Client:</span> {featured.client}</span>
+              <span><span className="font-semibold text-[#a8c8de]">Year:</span> {featured.year}</span>
+            </div>
           </div>
         </div>
 
@@ -63,16 +75,26 @@ function FeaturedProjects() {
           {projects.map((p, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-[#dbeeff] bg-white p-7 flex flex-col gap-3"
+              className="rounded-2xl border border-[#dbeeff] bg-white overflow-hidden flex flex-col"
             >
-              <span className="self-start rounded-full bg-[#dbeeff] px-3 py-1 text-xs font-bold text-[#004771]">
-                {p.tag}
-              </span>
-              <h4 className="text-base font-extrabold text-[#002b47] leading-snug">{p.title}</h4>
-              <p className="text-sm leading-relaxed text-zinc-500 flex-1">{p.description}</p>
-              <div className="mt-2 flex gap-4 text-xs text-zinc-400">
-                <span>{p.client}</span>
-                <span>{p.year}</span>
+              <div className="relative h-48 w-full shrink-0">
+                <Image
+                  src="/helping-hand.jpg"
+                  alt={p.title}
+                  fill
+                  className="object-cover"
+                />
+                <span className="absolute top-3 left-3 rounded-full bg-[#dbeeff] px-3 py-1 text-xs font-bold text-[#004771]">
+                  {p.tag}
+                </span>
+              </div>
+              <div className="flex flex-1 flex-col gap-3 p-7">
+                <h4 className="text-base font-extrabold text-[#002b47] leading-snug">{p.title}</h4>
+                <p className="text-sm leading-relaxed text-zinc-500 flex-1">{p.description}</p>
+                <div className="mt-2 flex gap-4 text-xs text-zinc-400">
+                  <span>{p.client}</span>
+                  <span>{p.year}</span>
+                </div>
               </div>
             </div>
           ))}
@@ -84,7 +106,7 @@ function FeaturedProjects() {
             href="#contact"
             className="inline-flex items-center rounded-full bg-[#106c9d] px-8 py-4 font-bold text-white shadow-lg shadow-[#106c9d]/30 transition-all hover:bg-[#004771] hover:-translate-y-0.5 active:scale-95"
           >
-            View Our Projects
+            View All Projects
           </a>
         </div>
 
