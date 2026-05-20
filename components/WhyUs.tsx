@@ -71,7 +71,7 @@ function WhyUs() {
             ))}
           </div>
 
-          <button className="mt-12 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#004771] dark:text-[#106c9d] hover:underline decoration-2 underline-offset-8 transition-all">
+          <button type="button" className="mt-12 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#004771] dark:text-[#106c9d] hover:underline decoration-2 underline-offset-8 transition-all">
             Read our full story <ArrowRight size={16} />
           </button>
         </div>

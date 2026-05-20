@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Linkedin, Mail } from "lucide-react";
+import { Link2, Mail } from "lucide-react";
 
 function Team() {
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
@@ -86,10 +86,10 @@ function Team() {
                 {/* Overlay with Socials on Hover */}
                 <div className="absolute inset-0 flex items-end bg-linear-to-t from-[#004771]/90 via-transparent to-transparent p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="flex gap-4">
-                    <button className="rounded-full bg-white/20 p-2 text-white backdrop-blur-md hover:bg-[#106c9d] transition-colors">
-                      <Linkedin size={18} />
+                    <button type="button" aria-label="View profile" className="rounded-full bg-white/20 p-2 text-white backdrop-blur-md hover:bg-[#106c9d] transition-colors">
+                      <Link2 size={18} />
                     </button>
-                    <button className="rounded-full bg-white/20 p-2 text-white backdrop-blur-md hover:bg-[#106c9d] transition-colors">
+                    <button type="button" aria-label="Send email" className="rounded-full bg-white/20 p-2 text-white backdrop-blur-md hover:bg-[#106c9d] transition-colors">
                       <Mail size={18} />
                     </button>
                   </div>

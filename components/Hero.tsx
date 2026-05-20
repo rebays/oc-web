@@ -35,7 +35,7 @@ function Hero() {
               </h1>
 
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-[#106c9d] text-white font-bold rounded-lg shadow-lg shadow-[#106c9d]/20 hover:bg-[#004771] transition-all flex items-center group">
+                <button type="button" className="px-8 py-4 bg-[#106c9d] text-white font-bold rounded-lg shadow-lg shadow-[#106c9d]/20 hover:bg-[#004771] transition-all flex items-center group">
                   Discover more
                   <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
                 </button>

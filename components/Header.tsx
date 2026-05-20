@@ -73,7 +73,7 @@ export default function Header() {
           </a>
 
           {/* MOBILE MENU */}
-          <button className="flex h-9 w-9 items-center justify-center rounded-lg bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-white md:hidden">
+          <button type="button" aria-label="Open menu" className="flex h-9 w-9 items-center justify-center rounded-lg bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-white md:hidden">
             <Menu size={18} />
           </button>
         </div>
