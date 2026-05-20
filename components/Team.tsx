@@ -1,33 +1,44 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { Linkedin, Mail } from "lucide-react";
 
 function Team() {
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
+
+  const handleImageError = (name: string) => {
+    setFailedImages(prev => new Set(prev).add(name));
+  };
+
+  const getInitials = (name: string) =>
+    name.split(" ").map(n => n[0]).slice(0, 2).join("");
   const team = [
   {
     name: "Karl Saliga",
     role: "Lead Consultant & Founder",
     bio: "With over 20 years in organizational development across the Pacific, Karl specializes in institutional reform and diagnostic consultancy for high-impact organizations.",
-    img: "/oc-web/karl.jpg"
+    img: "/karl.jpg"
   },
   {
     name: "Dr. Jerry B. Siota",
     role: "Senior Strategy Advisor",
     bio: "A specialist in strategic planning and project management, Dr. Siota drives structural results for both public sector institutions and private enterprises.",
-    img: "/oc-web/jerry.jpg"
+    img: "/jerry.jpg"
   },
   {
     name: "Liam Sau",
     role: "Project Operations Manager", 
     bio: "Liam oversees complex project delivery and operational workflows, ensuring that organizational diagnostics translate into actionable, sustainable results.",
-    img: "/oc-web/liam.jpg" // Updated to unique image path
+    img: "/liam.jpg" // Updated to unique image path
   },
   {
     name: "Dr. Derek Mane",
     role: "Capacity Building Specialist",
     bio: "Dr. Mane designs and delivers high-level training frameworks, fostering leadership and technical skill growth within the Solomon Islands' workforce.",
-    img: "/oc-web/dmane.jpg"
+    img: "/dmane.jpg"
   }
-];
+];  
 
   return (
     <section id="team" className="bg-white px-6 py-24 dark:bg-zinc-950 md:px-12">
@@ -54,17 +65,26 @@ function Team() {
             <div key={i} className="group relative">
               {/* Image Container */}
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
-                <Image 
-                  src={member.img}
-                  alt={member.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
-                  priority={i === 0} // Load first image faster
-                />
+                {failedImages.has(member.name) ? (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#004771]/10 to-[#106c9d]/10">
+                    <span className="text-5xl font-black text-[#004771]/40 dark:text-[#106c9d]/60 select-none">
+                      {getInitials(member.name)}
+                    </span>
+                  </div>
+                ) : (
+                  <Image
+                    src={member.img}
+                    alt={member.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                    priority={i === 0}
+                    onError={() => handleImageError(member.name)}
+                  />
+                )}
                 
                 {/* Overlay with Socials on Hover */}
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#004771]/90 via-transparent to-transparent p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-end bg-linear-to-t from-[#004771]/90 via-transparent to-transparent p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="flex gap-4">
                     <button className="rounded-full bg-white/20 p-2 text-white backdrop-blur-md hover:bg-[#106c9d] transition-colors">
                       <Linkedin size={18} />

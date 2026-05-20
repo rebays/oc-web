@@ -9,7 +9,7 @@ function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           className="w-full h-full object-cover"
-          src='/oc-web/helping-hand.jpg'
+          src='/helping-hand.jpg'
           alt='helping-hand'
           fill
           priority // Added priority for LCP optimization
