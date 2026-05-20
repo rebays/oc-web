@@ -9,13 +9,13 @@ const team = [
     name: "Karl Saliga",
     role: "Lead Consultant & Founder",
     bio: "With over 20 years in organizational development across the Pacific, Karl specializes in institutional reform and diagnostic consultancy for high-impact organizations.",
-    img: "/karl.jpg",
+    img: "/karl.png",
   },
   {
     name: "Dr. Jerry B. Siota",
     role: "Senior Strategy Advisor",
     bio: "A specialist in strategic planning and project management, Dr. Siota drives structural results for both public sector institutions and private enterprises.",
-    img: "/jerry.jpg",
+    img: "/jerry.png",
   },
   {
     name: "Liam Sau",
@@ -27,7 +27,7 @@ const team = [
     name: "Dr. Derek Mane",
     role: "Capacity Building Specialist",
     bio: "Dr. Mane designs and delivers high-level training frameworks, fostering leadership and technical skill growth within the Solomon Islands' workforce.",
-    img: "/dmane.jpg",
+    img: "/derek.png",
   },
 ];
 
