@@ -12,13 +12,9 @@ function CTA() {
           <span className="text-[#3b9fd4]">Your Organization?</span>
         </h2>
 
-        <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-[#a8c8de]">
-          Whether you&apos;re a local NGO or a government agency, our diagnostic approach uncovers the path to sustainable growth. Let&apos;s start the conversation.
-        </p>
-
         <a
           href="#contact"
-          className="inline-flex items-center rounded-xl bg-[#106c9d] px-8 py-4 font-bold text-white shadow-2xl shadow-[#106c9d]/30 transition-all hover:bg-[#3b9fd4] hover:-translate-y-0.5 active:scale-95"
+          className="inline-flex items-center rounded-full bg-[#106c9d] px-8 py-4 font-bold text-white shadow-lg shadow-[#106c9d]/30 transition-all hover:bg-[#004771] hover:-translate-y-0.5 active:scale-95"
         >
           Request a Free Consultation
         </a>
