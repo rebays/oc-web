@@ -7,8 +7,8 @@ const stats = [
 
 function WhyUs() {
   return (
-    <section id="about" className="bg-[#f0f8ff] px-6 py-28 md:px-12">
-      <div className="mx-auto max-w-4xl text-center">
+    <section id="about" className="bg-white px-6 py-28 md:px-12">
+      <div className="mx-auto max-w-4xl text-center rounded-3xl bg-[#f0f8ff] px-10 py-16">
 
         <h2 className="mb-5 text-3xl font-extrabold tracking-tight text-[#002b47]">
           At a Glance
