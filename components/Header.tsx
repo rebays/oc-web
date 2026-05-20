@@ -62,22 +62,24 @@ export default function Header() {
       </header>
 
       {/* Full-screen overlay */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[#002b47]">
-          <nav className="flex flex-col items-center gap-8">
-            {navLinks.map(([label, href]) => (
-              <a
-                key={label}
-                href={href}
-                onClick={() => setMenuOpen(false)}
-                className="text-4xl font-black text-white transition-colors hover:text-[#3b9fd4] md:text-6xl"
-              >
-                {label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      )}
+      <div className={`fixed inset-0 z-40 flex flex-col items-center justify-center bg-[#002b47] transition-all duration-500 ${
+        menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+      }`}>
+        <nav className={`flex flex-col items-center gap-8 transition-all duration-500 ${
+          menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}>
+          {navLinks.map(([label, href]) => (
+            <a
+              key={label}
+              href={href}
+              onClick={() => setMenuOpen(false)}
+              className="text-4xl font-black text-white transition-colors hover:text-[#3b9fd4] md:text-6xl"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+      </div>
     </>
   );
 }
