@@ -72,29 +72,6 @@ function Footer() {
             </div>
           </div>
 
-          {/* Newsletter */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#3b9fd4]">Advisory Insights</p>
-            <p className="mb-6 text-lg font-semibold leading-snug text-white">
-              Get the latest Pacific institutional insights delivered to your inbox.
-            </p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Business Email"
-                className="flex-1 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-[#a8c8de]/50 outline-none transition-all focus:border-[#106c9d]"
-              />
-              <button
-                type="submit"
-                className="whitespace-nowrap rounded-xl bg-[#106c9d] px-5 py-3 font-bold text-white transition-all hover:bg-[#3b9fd4] active:scale-95"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p className="mt-3 text-[11px] text-[#a8c8de]/40">
-              By subscribing, you agree to our professional data policy.
-            </p>
-          </div>
         </div>
 
         {/* Link columns */}
