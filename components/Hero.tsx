@@ -26,7 +26,7 @@ function Hero() {
 
           {/* Left: content */}
           <div>
-            <h1 className="mb-6 text-5xl font-black font-serif text-white leading-[1.05] md:text-6xl lg:text-7xl">
+            <h1 className="mb-6 text-4xl font-black font-serif text-white leading-[1.05] md:text-5xl lg:text-6xl">
               Better Health<br />
               for Your{" "}
               <span className="text-[#3b9fd4]">Organization.</span>
