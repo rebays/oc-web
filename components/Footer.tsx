@@ -26,7 +26,7 @@ function Footer() {
             <h5 className="text-sm font-bold uppercase tracking-widest text-white">Links</h5>
             <div className="flex flex-col gap-3 text-sm">
               <a href="#about" className="transition-colors hover:text-white">About</a>
-              <a href="#team" className="transition-colors hover:text-white">Leadership</a>
+              <a href="/people" className="transition-colors hover:text-white">Leadership</a>
               <a href="#contact" className="transition-colors hover:text-white">Contact</a>
               <a href="#" className="transition-colors hover:text-white">Privacy</a>
             </div>

@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navLinks = [
   ["About", "#about"],
   ["Services", "#services"],
-  ["Team", "#team"],
+  ["People", "/people"],
   ["Contact", "#contact"],
 ];
 
@@ -68,16 +69,27 @@ export default function Header() {
         <nav className={`flex flex-col items-center gap-8 transition-all duration-500 ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          {navLinks.map(([label, href]) => (
-            <a
-              key={label}
-              href={href}
-              onClick={() => setMenuOpen(false)}
-              className="text-4xl font-black text-white transition-colors hover:text-[#3b9fd4] md:text-6xl"
-            >
-              {label}
-            </a>
-          ))}
+          {navLinks.map(([label, href]) =>
+            href.startsWith("/") ? (
+              <Link
+                key={label}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+                className="text-4xl font-black text-white transition-colors hover:text-[#3b9fd4] md:text-6xl"
+              >
+                {label}
+              </Link>
+            ) : (
+              <a
+                key={label}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+                className="text-4xl font-black text-white transition-colors hover:text-[#3b9fd4] md:text-6xl"
+              >
+                {label}
+              </a>
+            )
+          )}
         </nav>
       </div>
     </>
