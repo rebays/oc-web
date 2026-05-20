@@ -42,7 +42,7 @@ export default function Header() {
           aria-label="Open menu"
           className="transition-opacity hover:opacity-80"
         >
-          <div className="flex items-center gap-2.5 rounded-xl bg-[#004771] px-5 py-3 text-sm font-bold text-white">
+          <div className="flex items-center gap-2.5 rounded-full bg-[#004771] px-5 py-3 text-sm font-bold text-white">
             Menu
             <Menu size={20} />
           </div>
