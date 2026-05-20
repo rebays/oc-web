@@ -27,7 +27,7 @@ export default function Header() {
       >
         {/* Logo */}
         <a href="#">
-          <span className="text-lg font-bold tracking-tight leading-none text-white">
+          <span className="text-2xl font-bold tracking-tight leading-none text-white">
             orgclinic
           </span>
         </a>
