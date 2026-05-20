@@ -18,10 +18,10 @@ function Footer() {
 
           {/* Links */}
           <div className="flex flex-col gap-3 text-sm">
-            <a href="#about" className="transition-colors hover:text-white">About</a>
-            <a href="/people" className="transition-colors hover:text-white">Leadership</a>
-            <a href="#contact" className="transition-colors hover:text-white">Contact</a>
-            <a href="#" className="transition-colors hover:text-white">Privacy</a>
+            <a href="/about" className="transition-colors hover:text-white">About</a>
+            <a href="/people" className="transition-colors hover:text-white">Our People</a>
+            <a href="/our-projects" className="transition-colors hover:text-white">Our Work</a>
+            <a href="/contact" className="transition-colors hover:text-white">Contact</a>
           </div>
 
           {/* Socials */}

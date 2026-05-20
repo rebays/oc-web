@@ -46,10 +46,7 @@ function Team() {
 
         {/* Header */}
         <div className="mb-16">
-          <div className="mb-4 flex items-center gap-3">
-            <span className="h-px w-8 bg-[#106c9d]" />
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#106c9d]">Leadership</span>
-          </div>
+
           <h2 className="text-4xl font-extrabold tracking-tight text-[#002b47] md:text-5xl">
             Meet Our <span className="text-[#106c9d]">Strategic Advisors.</span>
           </h2>
@@ -64,7 +61,7 @@ function Team() {
             <div key={i} className="group">
 
               {/* Photo */}
-              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl bg-[#dbeeff]">
+              <div className="relative aspect-3/4 w-full overflow-hidden rounded-2xl bg-[#dbeeff]">
                 {failedImages.has(member.name) ? (
                   <div className="flex h-full w-full items-center justify-center bg-linear-to-br from-[#004771] to-[#106c9d]">
                     <span className="select-none text-5xl font-black text-white/30">

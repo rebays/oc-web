@@ -5,10 +5,10 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  ["About", "#about"],
-  ["Services", "#services"],
+  ["About", "/about"],
+  ["Our Work", "/our-projects"],
   ["People", "/people"],
-  ["Contact", "#contact"],
+  ["Contact", "/contact"],
 ];
 
 export default function Header() {
@@ -53,7 +53,7 @@ export default function Header() {
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             onClick={() => setMenuOpen(!menuOpen)}
-            className="relative z-[60] transition-opacity hover:opacity-80"
+            className="relative z-60 transition-opacity hover:opacity-80"
           >
             <div className="flex items-center gap-2.5 rounded-full bg-[#004771] px-5 py-3 text-sm font-bold text-white">
               {menuOpen ? (

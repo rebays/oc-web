@@ -54,7 +54,7 @@ function Hero() {
         <div className="absolute inset-0 bg-linear-to-br from-[#002b47]/80 via-[#002b47]/60 to-[#004771]/50" />
 
         {/* Decorative glows */}
-        <div className="absolute top-1/4 right-0 h-[500px] w-[500px] rounded-full bg-[#106c9d]/15 blur-3xl pointer-events-none" />
+        <div className="absolute top-1/4 right-0 h-125 w-125 rounded-full bg-[#106c9d]/15 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-[#3b9fd4]/10 blur-3xl pointer-events-none" />
       </div>
 
