@@ -38,19 +38,6 @@ function Services() {
     <section id="services" className="bg-[#f0f8ff] px-6 py-28 md:px-12">
       <div className="mx-auto max-w-7xl">
 
-        {/* Header */}
-        <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div>
-            <h2 className="text-4xl font-extrabold tracking-tight text-[#002b47] md:text-5xl">
-              Solutions Built for<br />
-              <span className="text-[#106c9d]">Pacific Resilience.</span>
-            </h2>
-          </div>
-          <p className="max-w-sm text-base text-zinc-500 leading-relaxed md:text-right">
-            International best practices, deeply rooted in local context.
-          </p>
-        </div>
-
         {/* Grid */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
