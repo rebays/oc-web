@@ -42,9 +42,7 @@ export default function Header() {
           aria-label="Open menu"
           className="transition-opacity hover:opacity-80"
         >
-          <div className={`flex items-center gap-2.5 rounded-xl px-5 py-3 text-sm font-bold ${
-            scrolled ? "bg-[#004771] text-white" : "bg-white/20 text-white backdrop-blur-sm"
-          }`}>
+          <div className="flex items-center gap-2.5 rounded-xl bg-[#004771] px-5 py-3 text-sm font-bold text-white">
             Menu
             <Menu size={20} />
           </div>
