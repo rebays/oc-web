@@ -12,9 +12,9 @@ function Hero() {
           alt="OrgClinic — Helping hand"
           fill
           priority
-          className="object-cover opacity-15"
+          className="object-cover"
         />
-        <div className="absolute inset-0 bg-linear-to-br from-[#002b47] via-[#002b47]/90 to-[#004771]/70" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#002b47]/80 via-[#002b47]/60 to-[#004771]/50" />
       </div>
 
       {/* Decorative glows */}
