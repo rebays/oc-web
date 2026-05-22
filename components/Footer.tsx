@@ -10,18 +10,27 @@ function Footer() {
 
           {/* Logo */}
           <div className="flex flex-col gap-4">
-            <span className="text-xl font-bold tracking-tight text-white">orgclinic</span>
+            <span className="text-xl text-white" style={{ fontFamily: "var(--font-evermore)" }}>orgclinic</span>
             <p className="max-w-xs text-sm leading-relaxed">
               Partnering with Solomon Islands leaders to build resilient, high-impact organizations.
             </p>
           </div>
 
           {/* Links */}
-          <div className="flex flex-col gap-3 text-sm">
-            <a href="/about" className="transition-colors hover:text-white">About</a>
-            <a href="/people" className="transition-colors hover:text-white">Our People</a>
-            <a href="/our-projects" className="transition-colors hover:text-white">Our Work</a>
-            <a href="/contact" className="transition-colors hover:text-white">Contact</a>
+          <div className="grid grid-cols-2 gap-x-12 gap-y-8 text-sm md:grid-cols-4">
+            {[
+              { title: "What we do", links: [["About", "/about"], ["Process", "/process"], ["Services", "/services"]] },
+              { title: "Our Work", links: [["Projects", "/our-projects"]] },
+              { title: "Workplace", links: [["People", "/people"], ["Careers", "/careers"]] },
+              { title: "Content", links: [["Publications", "/publications"], ["Articles", "/articles"], ["Contact", "/contact"]] },
+            ].map(({ title, links }) => (
+              <div key={title} className="flex flex-col gap-3">
+                <span className="text-xs font-light uppercase tracking-widest text-[#3b9fd4]">{title}</span>
+                {links.map(([label, href]) => (
+                  <a key={label} href={href} className="transition-colors hover:text-white">{label}</a>
+                ))}
+              </div>
+            ))}
           </div>
 
           {/* Socials */}

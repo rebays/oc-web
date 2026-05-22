@@ -21,7 +21,7 @@ const team = [
     name: "Liam Sau",
     role: "Director",
     bio: "Oversees project delivery and operations, translating diagnostics into actionable results.",
-    img: "/liam.jpg",
+    img: "/liam.png",
   },
   {
     name: "Dr. Derek Mane",

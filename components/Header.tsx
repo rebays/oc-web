@@ -64,9 +64,9 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" onClick={() => setMenuOpen(false)}>
-            <span className={`text-2xl font-bold tracking-tight leading-none transition-colors duration-300 ${
+            <span className={`text-sm leading-none transition-colors duration-300 ${
               menuOpen ? "text-[#002b47]" : scrolled ? "text-[#002b47]" : "text-white"
-            }`}>
+            }`} style={{ fontFamily: "var(--font-evermore)" }}>
               orgclinic
             </span>
           </Link>

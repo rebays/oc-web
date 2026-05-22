@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const evermore = localFont({
+  src: "../evermore/Evermore.ttf",
+  variable: "--font-evermore",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jakarta.variable} font-sans antialiased`}>
+      <body className={`${jakarta.variable} ${evermore.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
