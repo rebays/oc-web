@@ -4,6 +4,12 @@
 
 @theme inline {
   --font-sans: var(--font-jakarta);
+  --animate-marquee: marquee 60s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 :root {
