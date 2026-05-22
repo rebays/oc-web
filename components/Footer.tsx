@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Link2, Globe, MessageCircle } from "lucide-react";
 
 function Footer() {
@@ -27,7 +28,7 @@ function Footer() {
               <div key={title} className="flex flex-col gap-3">
                 <span className="text-xs font-light uppercase tracking-widest text-[#3b9fd4]">{title}</span>
                 {links.map(([label, href]) => (
-                  <a key={label} href={href} className="transition-colors hover:text-white">{label}</a>
+                  <Link key={label} href={href} className="transition-colors hover:text-white">{label}</Link>
                 ))}
               </div>
             ))}
