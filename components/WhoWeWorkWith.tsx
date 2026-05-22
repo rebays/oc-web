@@ -1,21 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
-const orgs = [
-  "WHO",
-  "UNDP",
-  "PMO",
-  "Foreign Affairs",
-  "EFAT",
-  "ECAT",
-  "RSIPF",
-  "MERHD",
-  "SPREP",
-  "Electoral Commission",
+const orgs: { name: string; logo?: string }[] = [
+  { name: "WHO" },
+  { name: "UNDP" },
+  { name: "PMO" },
+  { name: "Foreign Affairs" },
+  { name: "EFAT" },
+  { name: "ECAT" },
+  { name: "RSIPF", logo: "/logos/rsipf-logo.png" },
+  { name: "MERHD" },
+  { name: "SPREP" },
+  { name: "Electoral Commission" },
 ];
 
-const groups: string[][] = [];
+const groups: { name: string; logo?: string }[][] = [];
 for (let i = 0; i < orgs.length; i += 3) {
   groups.push(orgs.slice(i, i + 3));
 }
@@ -43,12 +44,16 @@ function WhoWeWorkWith() {
         >
           {groups.map((group, i) => (
             <div key={i} className="flex min-w-full justify-center gap-6">
-              {group.map((name) => (
+              {group.map(({ name, logo }) => (
                 <div
                   key={name}
                   className="flex h-20 min-w-[210px] items-center justify-center rounded-2xl border border-[#dbeeff] bg-[#f0f8ff] px-10 text-base font-bold text-[#004771] whitespace-nowrap"
                 >
-                  {name}
+                  {logo ? (
+                    <Image src={logo} alt={name} width={120} height={48} className="object-contain" />
+                  ) : (
+                    name
+                  )}
                 </div>
               ))}
             </div>
